@@ -1,0 +1,26 @@
+{
+  "compilerType": "solcjs",
+  "compilerVersion": "./node_modules/solc",
+  "outputType": "all",
+  "flattenOutputDirectory": "./custom_flatten",
+  "compilerOptions": {
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "abi",
+          "evm.bytecode.sourceMap",
+          "evm.deployedBytecode.sourceMap",
+          "metadata"
+        ],
+        "": ["ast"]
+      }
+    },
+    "evmVersion": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@arabic/farming",
+  "version": "1.0.0",
+  "author": "Arabic Cash",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arabicscash/arabic-farming"
+  },
+  "files": [
+    "build"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "build": "waffle & waffle flatten",
+    "compile": "waffle",
+    "pretest": "yarn compile",
+    "test": "mocha --timeout 20000",
+    "lint": "prettier ./test/**/*.ts --check",
+    "prepublishOnly": "yarn test",
+    "flatten": "waffle flatten"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "@uniswap/v2-core": "^1.0.1",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.1.0",
+    "ethereumjs-util": "^7.0.5",
+    "mocha": "^8.1.3",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "solc": "0.6.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2",
+    "@pancakeswap/pancake-swap-lib": "^0.0.4"
+  }
+}
